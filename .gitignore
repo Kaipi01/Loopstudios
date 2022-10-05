@@ -1,0 +1,14 @@
+*.xd
+*.sketch
+*.fig
+
+.cache
+.DS_Store
+.prettierignore
+
+dist/
+node_modules/
+
+README-template.md
+style-guide.md
+plan.txt
