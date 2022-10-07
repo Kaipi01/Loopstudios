@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/Kaipi01/Loopstudios
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://kaipi01.github.io/Loopstudios/
 
 ## My process
 
