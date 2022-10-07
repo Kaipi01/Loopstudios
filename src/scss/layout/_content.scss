@@ -1,12 +1,12 @@
 @use "./utils/variables" as *;
 
 .content {
-    max-width: 1250px;
-    margin: 0 auto;
-    background-color: $White;
-    padding: 100px 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  background-color: $White;
 
-    @media (min-width: $Tablet) {
-        padding: 100px 40px;
-    }
+  @media (min-width: $Tablet) {
+    padding: 100px 40px;
+  }
 }
