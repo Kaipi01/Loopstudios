@@ -3,8 +3,6 @@
 .header {
   display: grid;
   background-color: $Black;
-  //max-width: 1250px;
-  //margin: 0 auto;
   isolation: isolate;
 
   & > * {
