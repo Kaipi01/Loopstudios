@@ -1,0 +1,29 @@
+@use "./utils/variables" as *;
+
+.link {
+  position: relative;
+  color: $White;
+  font-weight: bold;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+    background-color: $White;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::before {
+      width: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
