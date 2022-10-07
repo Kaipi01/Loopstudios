@@ -1,0 +1,98 @@
+@use "./utils/variables" as *;
+
+.footer {
+  background-color: $Black;
+
+  @media (min-width: $Tablet) {
+    margin-top: 50px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 45px 0;
+    text-align: center;
+
+    @media (min-width: $Tablet) {
+      padding: 45px 40px;
+    }
+
+    @media (min-width: $Tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: start;
+    }
+  }
+
+  &__logo {
+    width: 130px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 17px;
+
+    @media (min-width: $Tablet) {
+      flex-direction: row;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__socials {
+    &-link {
+      &::before {
+        bottom: -5px;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    &-title {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      clip-path: inset(50%);
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      @media (min-width: $Tablet) {
+        justify-content: flex-end;
+      }
+    }
+
+    &-img {
+      width: 25px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__rights {
+    margin-top: 20px;
+    color: $Dark-Gray;
+    font-family: $Font-Alata;
+
+    @media (min-width: $Tablet) {
+      margin-bottom: 3px;
+    }
+  }
+}

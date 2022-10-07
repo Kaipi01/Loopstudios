@@ -1,0 +1,69 @@
+@use "./utils/variables" as *;
+
+.header {
+  display: grid;
+  background-color: $Black;
+  //max-width: 1250px;
+  //margin: 0 auto;
+  isolation: isolate;
+
+  & > * {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+
+  &__bg {
+    z-index: -1;
+    width: 100vw;
+    opacity: 0.5;
+
+    &-mobile {
+      @media (min-width: 600px) {
+        display: none;
+      }
+    }
+
+    &-desktop {
+      display: none;
+      @media (min-width: 600px) {
+        display: block;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    place-self: center;
+
+    @media (min-width: 600px) {
+      place-self: start;
+      align-self: end;
+    }
+
+    @media (min-width: $Tablet) {
+      align-self: center;
+    }
+  }
+
+  &__title {
+    max-width: 350px;
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid $White;
+    color: $White;
+    font-size: 2.4rem;
+    font-weight: lighter;
+    line-height: 0.9;
+    text-transform: uppercase;
+
+    @media (min-width: $Tablet) {
+      max-width: 550px;
+      margin: 40px;
+      padding: 35px;
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+    }
+  }
+}

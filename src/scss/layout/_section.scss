@@ -1,0 +1,157 @@
+@use "./utils/variables" as *;
+
+.section {
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: $Tablet) {
+    position: relative;
+  }
+
+  &__title {
+    margin: 20px 0;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    @media (min-width: $Tablet) {
+      font-size: 2.5rem;
+      text-align: start;
+    }
+  }
+
+  &__img {
+    max-width: 600px;
+    margin-bottom: 10px;
+    &-desktop {
+      display: none;
+      @media (min-width: $Tablet) {
+        display: block;
+        //width: 25%;
+        margin-bottom: 140px;
+        margin-top: 30px;
+      }
+    }
+
+    &-mobile {
+      @media (min-width: $Tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    @media (min-width: $Tablet) {
+      position: absolute;
+      left: 470px;
+      bottom: 0;
+      width: 570px;
+      padding: 50px 70px 0 70px;
+      background-color: $White;
+    }
+  }
+
+  &__text {
+    width: 30ch;
+    margin: 0 auto;
+    padding: 0 10px;
+    color: $Very-Dark-Gray;
+    line-height: 1.3;
+
+    @media (min-width: $Tablet) {
+      width: auto;
+      text-align: start;
+      //font-size: 1.1rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+
+    @media (min-width: $Tablet) {
+      grid-template-columns: repeat(4,1fr);
+      margin-top: 70px;
+    }
+
+    &-text {
+      display: inline-flex;
+      align-items: flex-end;
+      height: 100%;
+      padding: 20px;
+      transition: all 0.7s ease-in-out;
+      box-shadow: inset 69px 0px 146px -47px $Black;
+      @media (min-width: $Tablet) {
+        box-shadow: inset 0px -80px 101px -37px $Black;
+      }
+    }
+
+    &-item {
+      max-width: 600px;
+    }
+
+    &-link {
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      color: $White;
+      font-size: 1.6rem;
+      line-height: 1;
+      text-align: left;
+      text-decoration: none;
+      text-transform: uppercase;
+      //position: relative;
+      isolation: isolate;
+
+      & > * {
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        img {
+          scale: 1.15;
+        }
+        span {
+          box-shadow: inset 89px 0px 166px -27px $Black;
+          @media (min-width: $Tablet) {
+            box-shadow: inset 0px -110px 101px -27px $Black;
+          }
+        }
+      }
+    }
+
+    &-img {
+      z-index: -1;
+      max-width: 600px;
+      transition: all 0.6s ease-in-out;
+
+      &-desktop {
+        display: none;
+        @media (min-width: $Tablet) {
+          display: block;
+        }
+      }
+
+      &-mobile {
+        @media (min-width: $Tablet) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 35px;
+
+    @media (min-width: $Tablet) {
+      position: absolute;
+      top: -35px;
+      right: 0;
+    }
+  }
+}
