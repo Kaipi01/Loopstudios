@@ -27,9 +27,8 @@
       display: none;
       @media (min-width: $Tablet) {
         display: block;
-        //width: 25%;
-        margin-bottom: 140px;
         margin-top: 30px;
+        margin-bottom: 140px;
       }
     }
 
@@ -43,8 +42,8 @@
   &__content {
     @media (min-width: $Tablet) {
       position: absolute;
-      left: 470px;
       bottom: 0;
+      left: 470px;
       width: 570px;
       padding: 50px 70px 0 70px;
       background-color: $White;
@@ -61,7 +60,6 @@
     @media (min-width: $Tablet) {
       width: auto;
       text-align: start;
-      //font-size: 1.1rem;
     }
   }
 
@@ -72,7 +70,7 @@
     gap: 20px;
 
     @media (min-width: $Tablet) {
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       margin-top: 70px;
     }
 
@@ -102,7 +100,6 @@
       text-align: left;
       text-decoration: none;
       text-transform: uppercase;
-      //position: relative;
       isolation: isolate;
 
       & > * {
