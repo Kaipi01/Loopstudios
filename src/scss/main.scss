@@ -1,0 +1,25 @@
+@use "./utils/variables" as *;
+@use "./components/button";
+@use "./components/link";
+@use "./layout/header";
+@use "./layout/nav";
+@use "./layout/content";
+@use "./layout/section";
+@use "./layout/footer";
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $Font-Josefin-Sans;
+  font-size: $Font-Size;
+}
+
+img {
+  width: 100%;
+}
